@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+         http://www.springframework.org/schema/tx 
+         http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+         
+	<!-- 打开Spring的Annotation支持 -->
+	<context:annotation-config />
+	<!-- 设定Spring 去哪些包中找Annotation -->
+	<context:component-scan base-package="com.phicomm.application.subscriber" />
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		配置连接池的初始值
+		<property name="initialSize" value="5" />
+		连接池的最大值
+		<property name="maxActive" value="3000"/>
+		最大空闲时，当经过一个高峰之后，连接池可以将一些用不到的连接释放，一直减少到maxIdle为止
+		<property name="maxIdle" value="20"/>
+		当最小空闲时，当连接少于minIdle时会自动去申请一些连接
+		<property name="minIdle" value="15" />
+		<property name="maxActive" value="3000" />
+		<property name="maxIdle" value="20" />
+		<property name="maxWait" value="300" />
+	</bean> -->
+<!-- 	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10" />
+		<property name="maxPoolSize" value="20" />
+		<property name="keepAliveSeconds" value="0" />
+		<property name="queueCapacity" value="500" />
+		<property name="rejectedExecutionHandler">  
+            <bean class="java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy"/>  
+        </property>  
+	</bean> -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"  
+        destroy-method="close">  
+        <property name="driverClass" value="${jdbc.driverClassName}" />  
+        <property name="jdbcUrl" value="${jdbc.url}" />  
+        <property name="user" value="${jdbc.username}" />  
+        <property name="password" value="${jdbc.password}" />  
+          
+         <!--连接池中保留的最小连接数。-->  
+        <property name="minPoolSize" value="15"/>  
+        <!--连接池中保留的最大连接数。Default: 15 -->  
+        <property name="maxPoolSize" value="100"/>  
+        <!--初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->  
+        <property name="initialPoolSize"  value="10"/>  
+        <!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->  
+        <property name="maxIdleTime" value="300"/>  
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->  
+        <property name="acquireIncrement" value="5"/>  
+        <!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements  
+        属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。  
+        如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0-->  
+        <property name="maxStatements" value="0"/>  
+        <!--每60秒检查所有连接池中的空闲连接。Default: 0   
+        <property name="idleConnectionTestPeriod" value="60" />-->  
+        <property name="idleConnectionTestPeriod" value="180" />  
+        <!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->  
+        <property name="acquireRetryAttempts"  value="30" />  
+          
+        <!--获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效  
+        保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试  
+         获取连接失败后该数据源将申明已断开并永久关闭。Default: false  
+        <property name="breakAfterAcquireFailure" value="true" />-->  
+          
+        <!--因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的  
+        时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable  
+         等方法来提升连接测试的性能。Default: false -->  
+        <property name="testConnectionOnCheckout" value="true" />  
+        <!--如果设为true那么在取得连接的同时将校验连接的有效性。Default: false -->  
+        <property name="testConnectionOnCheckin" value="true" />  
+        <!--c3p0将建一张名为Test的空表，并使用其自带的查询语句进行测试。如果定义了这个参数那么  
+        属性preferredTestQuery将被忽略。你不能在这张Test表上进行任何操作，它将只供c3p0测试  
+        使用。Default: null-->  
+        <property name="automaticTestTable" value="c3p0TestTable" />  
+    </bean>
+	<!-- 导入Src目录下的jdbc.properties文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<!--创建Spring的SessionFactory工厂 -->
+	<!-- 如果使用的是Annotation的方式，不能使用LocalSessionFactoryBean,而应该使用 org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<!-- 注入数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 设置Spring取那个包中查找相应的实体类 -->
+		<property name="packagesToScan">
+			<value>com.phicomm.application.subscriber.model</value>
+		</property>
+		<property name="hibernateProperties">
+			<!-- <value> hibernate.dialect=org.hibernate.dialect.HSQLDialect </value> -->
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.jdbc.batch_size">50</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.format_sql">false</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 开启HibernateTemplate，并且为其注入SessionFactory
+	使用HibernateTemplate不太方便的就是要获取session得通过getSessionFactory()方法获取 -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<!-- 配置Spring的事务处理 -->
+	<!-- 创建事务管理器-->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+<!-- 配置AOP，Spring是通过AOP来进行事务管理的 -->
+	<aop:config>
+	<!-- 设置pointCut表示哪些方法要加入事务处理 -->
+	<!-- 以下的事务是声明在DAO中，但是通常都会在Service来处理多个业务对象逻辑的关系，注入删除，更新等，此时如果在执行了一个步骤之后抛出异常
+		就会导致数据不完整，所以事务不应该在DAO层处理，而应该在service，这也就是Spring所提供的一个非常方便的工具，声明式事务 -->
+		<aop:pointcut id="allMethods"
+			expression="execution(* com.phicomm.application.subscriber.service.*.*(..))" />
+		<!-- 通过advisor来确定具体要加入事务控制的方法 -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods" />
+	</aop:config>
+<!-- 配置哪些方法要加入事务控制 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+		<!-- 让所有的方法都加入事务管理，为了提高效率，可以把一些查询之类的方法设置为只读的事务 -->
+			<tx:method name="*" propagation="REQUIRED" />
+			<!-- 以下方法都是可能设计修改的方法，就无法设置为只读 -->
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<tx:method name="del*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="report*" propagation="REQUIRED"/>
+			<tx:method name="init*" propagation="REQUIRED"/>
+			<tx:method name="app*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+</beans>

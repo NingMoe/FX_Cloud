@@ -1,0 +1,87 @@
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+ <SOAP-ENV:Header>
+  <cwmp:ID SOAP-ENV:mustUnderstand="1">1210</cwmp:ID>
+ </SOAP-ENV:Header>
+ <SOAP-ENV:Body>
+  <cwmp:Inform>
+   <DeviceId>
+    <Manufacturer>PHICOMM</Manufacturer>
+    <OUI>00904C084050</OUI>
+    <ProductClass>FIR303B</ProductClass>
+    <SerialNumber>00904C084050</SerialNumber>
+   </DeviceId>
+   <Event SOAP-ENC:arrayType="cwmp:EventStruct[1]">
+    <EventStruct>
+     <EventCode>4 VALUE CHANGE</EventCode>
+     <CommandKey></CommandKey>
+    </EventStruct>
+   </Event>
+   <MaxEnvelopes>1</MaxEnvelopes>
+   <CurrentTime>2014-1-10T13:19:46</CurrentTime>
+   <RetryCount>0</RetryCount>
+   <ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[0012]">
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.DeviceSummary</Name>
+     <Value xsi:type="xsd:string">InternetGatewayDevice:1.1[](Baseline:1, EthernetLAN:1, WiFiLAN:1, Time:1, IPPing:1, DeviceAssociation:1)</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.DeviceInfo.SpecVersion</Name>
+     <Value xsi:type="xsd:string">1.0</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.DeviceInfo.HardwareVersion</Name>
+     <Value xsi:type="xsd:string">V1.0</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.DeviceInfo.SoftwareVersion</Name>
+     <Value xsi:type="xsd:string">V1.0.1</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.DeviceInfo.ProvisioningCode</Name>
+     <Value xsi:type="xsd:string"></Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.ManagementServer.ParameterKey</Name>
+     <Value xsi:type="xsd:string">1</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name> InternetGatewayDevice.ManagementServer.ConnectionRequestURL</Name>
+     <Value xsi:type="xsd:string">http://10.10.80.133:30005</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.ACTSTATUS</Name>
+     <Value xsi:type="xsd:string">1</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.MAILADDRESS</Name>
+     <Value xsi:type="xsd:string">guilin.he@feixun.com.cn</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.PASSWORD</Name>
+     <Value xsi:type="xsd:string">MTIz</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.USERNAME</Name>
+     <Value xsi:type="xsd:string">guilin</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.MOBILE</Name>
+     <Value xsi:type="xsd:string"></Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.PROVINCE</Name>
+     <Value xsi:type="xsd:string">0_25_16_2</Value>
+    </ParameterValueStruct>
+    <ParameterValueStruct>
+     <Name>InternetGatewayDevice.X_PHICOMM.CLOUD.ZIPCODE</Name>
+     <Value xsi:type="xsd:string"></Value>
+    </ParameterValueStruct>
+   </ParameterList>
+  </cwmp:Inform>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

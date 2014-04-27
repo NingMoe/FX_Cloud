@@ -1,0 +1,123 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<SOAP-ENV:Header>
+<cwmp:ID SOAP-ENV:mustUnderstand="1">1631924260</cwmp:ID>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<cwmp:Inform>
+<DeviceId>
+<Manufacturer>PHICOMM</Manufacturer>
+<OUI>112233</OUI>
+<ProductClass>FWR-110</ProductClass>
+<SerialNumber>11:22:33:44:55:71</SerialNumber>
+<PID>pid001</PID>
+</DeviceId>
+<Event SOAP-ENC:arrayType="cwmp:EventStruct[1]">
+<EventStruct>
+<EventCode>X PHICOMM POWER</EventCode>
+<CommandKey></CommandKey>
+</EventStruct>
+</Event>
+<MaxEnvelopes>1</MaxEnvelopes>
+<CurrentTime>2013-06-26T20:32:27+00:00</CurrentTime>
+<RetryCount>0</RetryCount>
+<ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[0009]">
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.DeviceSummary</Name>
+<Value xsi:type="xsd:string">InternetGatewayDevice:1.1[](Baseline:1, EthernetLAN:1, WiFiLAN:1, Time:1, IPPing:1, DeviceAssociation:1)</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.DeviceInfo.SpecVersion</Name>
+<Value xsi:type="xsd:string">V2.0</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.DeviceInfo.HardwareVersion</Name>
+<Value xsi:type="xsd:string">1.1</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.DeviceInfo.SoftwareVersion</Name>
+<Value xsi:type="xsd:string">1.0</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.DeviceInfo.ProvisioningCode</Name>
+<Value xsi:type="xsd:string"></Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.ManagementServer.ConnectionRequestURL</Name>
+<Value xsi:type="xsd:string"></Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.ManagementServer.ParameterKey</Name>
+<Value xsi:type="xsd:string"></Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Outletname</Name>
+<Value xsi:type="xsd:string">卫生间</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Note</Name>
+<Value xsi:type="xsd:string">这是卫生间的插座</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.DeviceStatue</Name>
+<Value xsi:type="xsd:string">1</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.LockFlag</Name>
+<Value xsi:type="xsd:string">0</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Password</Name>
+<Value xsi:type="xsd:string"></Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.PhoneIMEI</Name>
+<Value xsi:type="xsd:string">00123</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Current</Name>
+<Value xsi:type="xsd:string">11</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Voltage</Name>
+<Value xsi:type="xsd:string">22</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Power</Name>
+<Value xsi:type="xsd:string">33</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.SegPower</Name>
+<Value xsi:type="xsd:string">13</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.ReportDate</Name>
+<Value xsi:type="xsd:string">2014-3-12 13:00:00</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.ClearTime</Name>
+<Value xsi:type="xsd:string">2014-3-10 13:00:00</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.TimerNum</Name>
+<Value xsi:type="xsd:string">2</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.TimerIndex</Name>
+<Value xsi:type="xsd:string">1</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Rule</Name>
+<Value xsi:type="xsd:string">我是第一条规则</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.TimerIndex</Name>
+<Value xsi:type="xsd:string">2</Value>
+</ParameterValueStruct>
+<ParameterValueStruct>
+<Name>InternetGatewayDevice.X_PHICOMM.Outlet.Rule</Name>
+<Value xsi:type="xsd:string">我是第二条规则</Value>
+</ParameterValueStruct>
+</ParameterList>
+</cwmp:Inform>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

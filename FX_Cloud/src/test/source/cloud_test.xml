@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<cloud_outlet_report id="1" rep_amps="0.2" report_time="2013-12-29 22:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2013-12-29 22:29:00" cal_time="2013-12-29 22:29:00" rep_kwh="2" rep_total_kwh="12" /> 
+	<cloud_outlet_report id="2" rep_amps="0.2" report_time="2013-12-29 23:00:00" rep_volt="220" otl_id="1" 
+		clear_time="2013-12-29 22:59:00" cal_time="2013-12-29 22:59:00" rep_kwh="3" rep_total_kwh="15" /> 
+	<cloud_outlet_report id="3" rep_amps="0.2" report_time="2013-12-29 23:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2013-12-29 23:29:00" cal_time="2013-12-29 23:29:00" rep_kwh="4" rep_total_kwh="19" /> 
+	<cloud_outlet_report id="4" rep_amps="0.2" report_time="2013-12-29 22:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2013-12-29 22:29:00" cal_time="2013-12-29 22:29:00" rep_kwh="3" rep_total_kwh="5" /> 
+	<cloud_outlet_report id="5" rep_amps="0.2" report_time="2013-12-29 23:00:00" rep_volt="220" otl_id="2" 
+		clear_time="2013-12-29 22:59:00" cal_time="2013-12-29 22:59:00" rep_kwh="4" rep_total_kwh="9" /> 
+	<cloud_outlet_report id="6" rep_amps="0.2" report_time="2013-12-29 23:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2013-12-29 23:29:00" cal_time="2013-12-29 23:29:00" rep_kwh="2" rep_total_kwh="11" /> 
+	<cloud_outlet_report id="7" rep_amps="0.2" report_time="2014-03-17 22:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-17 22:29:00" cal_time="2014-03-17 22:29:00" rep_kwh="2" rep_total_kwh="12" /> 
+	<cloud_outlet_report id="8" rep_amps="0.2" report_time="2014-03-17 23:00:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-17 22:59:00" cal_time="2014-03-17 22:59:00" rep_kwh="3" rep_total_kwh="15" /> 
+	<cloud_outlet_report id="9" rep_amps="0.2" report_time="2014-03-17 23:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-17 23:29:00" cal_time="2014-03-17 23:29:00" rep_kwh="4" rep_total_kwh="19" /> 
+	<cloud_outlet_report id="10" rep_amps="0.2" report_time="2014-03-17 22:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-17 22:29:00" cal_time="2014-03-17 22:29:00" rep_kwh="3" rep_total_kwh="5" /> 
+	<cloud_outlet_report id="11" rep_amps="0.2" report_time="2014-03-17 23:00:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-17 22:59:00" cal_time="2014-03-17 22:59:00" rep_kwh="4" rep_total_kwh="9" /> 
+	<cloud_outlet_report id="12" rep_amps="0.2" report_time="2014-03-17 23:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-17 23:29:00" cal_time="2014-03-17 23:29:00" rep_kwh="6" rep_total_kwh="15" /> 
+	<cloud_outlet_report id="13" rep_amps="0.2" report_time="2014-03-16 22:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-16 22:29:00" cal_time="2014-03-16 22:29:00" rep_kwh="2" rep_total_kwh="12" /> 
+	<cloud_outlet_report id="14" rep_amps="0.2" report_time="2014-03-16 23:00:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-16 22:59:00" cal_time="2014-03-16 22:59:00" rep_kwh="3" rep_total_kwh="15" /> 
+	<cloud_outlet_report id="15" rep_amps="0.2" report_time="2014-03-16 23:30:00" rep_volt="220" otl_id="1" 
+		clear_time="2014-03-16 23:29:00" cal_time="2014-03-16 23:29:00" rep_kwh="4" rep_total_kwh="19" /> 
+	<cloud_outlet_report id="16" rep_amps="0.2" report_time="2014-03-16 22:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-16 22:29:00" cal_time="2014-03-16 22:29:00" rep_kwh="3" rep_total_kwh="5" /> 
+	<cloud_outlet_report id="17" rep_amps="0.2" report_time="2014-03-16 23:00:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-16 22:59:00" cal_time="2014-03-17 22:59:00" rep_kwh="4" rep_total_kwh="9" /> 
+	<cloud_outlet_report id="18" rep_amps="0.2" report_time="2014-03-16 23:30:00" rep_volt="220" otl_id="2" 
+		clear_time="2014-03-16 23:29:00" cal_time="2014-03-16 23:29:00" rep_kwh="6" rep_total_kwh="15" /> 
+		
+</dataset>

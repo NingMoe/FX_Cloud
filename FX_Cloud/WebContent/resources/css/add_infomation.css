@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+.fx_pro_detail_contect{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;display:none;
+}
+/*产品Label样式*/
+.fx_pro_lab_title{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	width:241px;height:100%;
+}
+.fx_pro_lab_title .fx_pro_lab_title_i{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	position:absolute;top:2px;left:2px;width:237px;height:56px;border-left:1px #e0e0e0 solid;
+}
+.fx_pro_lab_title_i .fx_pro_lab_title_i_i{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	position:absolute;top:12px;left:70px;width:24px;height:33px;
+}
+.fx_pro_lab_title_i_i img{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	position:absolute;top:0px;left:0px;
+}
+.fx_pro_lab_title_i_i .fx_pro_lb_tb_w{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	display:none;
+}
+.fx_pro_lab_title_i .fx_pro_lab_title_i_t{
+	position:relative;
+	float:left;
+	clear:none;
+	margin:0px;
+	border:0px;
+	position:absolute;top:16px;left:110px;width:150px;height:33px;font-size:16px;color:#313131;
+}
